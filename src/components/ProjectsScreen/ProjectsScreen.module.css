@@ -663,6 +663,12 @@
 }
 
 /* ── Recent Activity ── */
+.recentActivityContent {
+  min-height: 340px;
+  max-height: 340px;
+  overflow: hidden;
+}
+
 .emptyHint {
   font-size: 0.78rem;
   color: #475569;
