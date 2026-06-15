@@ -334,6 +334,11 @@
   color: #e2e8f0;
   margin-bottom: 4px;
 }
+.ProjectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .sectionSub {
   font-size: 0.73rem;
@@ -663,7 +668,7 @@
 
 /* ── Recent Activity ── */
 .recentActivityContent {
-  height: 315px;
+  height: 321.5px;
   overflow: hidden;
 }
 

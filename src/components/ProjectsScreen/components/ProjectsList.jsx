@@ -1,13 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { getProjectProgress } from "../stats";
 import s from "../ProjectsScreen.module.css";
+import Button from "../../Button";
 
 export default function ProjectsList({ projects }) {
   const navigate = useNavigate();
 
   return (
     <div className={s.projectsCard}>
-      <div className={s.sectionLabel}>Choose a learning path</div>
+      <div className={s.ProjectHeader}>
+        <div className={s.sectionLabel}>Choose a learning path</div>
+        <Button variant="ghost" size="small">
+          Show more
+        </Button>
+      </div>
       <p className={s.sectionSub}>
         Each path is a structured curriculum. Your progress is saved
         independently.
