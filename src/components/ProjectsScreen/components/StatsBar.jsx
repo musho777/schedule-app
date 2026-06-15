@@ -1,9 +1,11 @@
 import { useState } from "react";
 import s from "../ProjectsScreen.module.css";
+import fireIcon from "../../../assets/fire.svg?url";
+import firstIcon from "../../../assets/first-icon.svg?url";
 
 export default function StatsBar({ stats }) {
   const [weeklyGoal, setWeeklyGoal] = useState(
-    () => Number(localStorage.getItem("weekly_goal")) || 12
+    () => Number(localStorage.getItem("weekly_goal")) || 12,
   );
   const [editingGoal, setEditingGoal] = useState(false);
   const [goalInput, setGoalInput] = useState(weeklyGoal);
@@ -11,7 +13,9 @@ export default function StatsBar({ stats }) {
   const { level } = stats;
   const levelPct =
     level.nextXP > level.prevXP
-      ? Math.round(((level.xp - level.prevXP) / (level.nextXP - level.prevXP)) * 100)
+      ? Math.round(
+          ((level.xp - level.prevXP) / (level.nextXP - level.prevXP)) * 100,
+        )
       : 100;
 
   const saveGoal = () => {
@@ -41,24 +45,9 @@ export default function StatsBar({ stats }) {
       <div className={s.statCard}>
         <div
           className={s.statIcon}
-          style={{ background: "#3b82f622", color: "#3b82f6" }}
-        >
-          📖
-        </div>
-        <div className={s.statBody}>
-          <span className={s.statValue}>{stats.daysStudied}</span>
-          <span className={s.statLabel}>Days studied</span>
-          <span className={s.statHint}>
-            {stats.daysStudied === 0 ? "Start your streak!" : "Keep it up!"}
-          </span>
-        </div>
-      </div>
-      <div className={s.statCard}>
-        <div
-          className={s.statIcon}
           style={{ background: "#f59e0b22", color: "#f59e0b" }}
         >
-          🔥
+          <img src={fireIcon} alt="Streak" />
         </div>
         <div className={s.statBody}>
           <span className={s.statValue}>{stats.streak}</span>
