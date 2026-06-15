@@ -22,7 +22,7 @@ export default function ProjectsScreen({ projects }) {
       <Header />
       <div className={s.dashboard}>
         <StatsBar stats={stats} />
-        <div style={{ display: "flex", gap: 16 }}>
+        <div className={s.wrapper}>
           <div className={s.leftCol}>
             <div className={s.colGrid}>
               <TodaysFocus
