@@ -20,15 +20,16 @@ export default function TodaysFocus({ lastProject, todaysTasks, projects }) {
               (() => {
                 try {
                   return JSON.parse(
-                    localStorage.getItem(lastProject.storageKey)
+                    localStorage.getItem(lastProject.storageKey),
                   )?.startDate;
                 } catch {
                   return null;
                 }
               })(),
-              todayKey()
+              todayKey(),
             )}
-            : <span style={{ color: lastProject.color }}>{lastProject.name}</span>
+            :{" "}
+            <span style={{ color: lastProject.color }}>{lastProject.name}</span>
           </div>
           <div className={s.focusTasks}>
             {todaysTasks.slice(0, 5).map((t) => (
@@ -38,7 +39,7 @@ export default function TodaysFocus({ lastProject, todaysTasks, projects }) {
                 >
                   {t.done && "✓"}
                 </div>
-                <span className={t.done ? s.focusTaskDone : ""}>
+                <span className={t.done ? s.focusTaskDone : s.focusTask}>
                   {t.title.replace(/^(Study:|Build:|Practice:|Read:)\s*/i, "")}
                 </span>
               </div>
@@ -59,7 +60,9 @@ export default function TodaysFocus({ lastProject, todaysTasks, projects }) {
         <>
           <div className={s.focusEmpty}>
             <p className={s.focusEmptyText}>No active project yet.</p>
-            <p className={s.focusEmptyHint}>Pick a learning path to get started.</p>
+            <p className={s.focusEmptyHint}>
+              Pick a learning path to get started.
+            </p>
           </div>
           <button
             className={s.focusBtn}
