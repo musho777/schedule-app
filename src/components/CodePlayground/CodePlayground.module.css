@@ -1,0 +1,231 @@
+.playground {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  background: #0f0f13;
+  color: #e2e8f0;
+}
+
+.header {
+  background: #1a1a24;
+  border-bottom: 1px solid #2d2d3d;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: -0.3px;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btnRun {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnRun:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.btnRun:active {
+  transform: translateY(0);
+}
+
+.btnBack {
+  background: #1a1a24;
+  color: #e2e8f0;
+  border: 1px solid #2d2d3d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnBack:hover {
+  border-color: #3d3d55;
+  transform: translateY(-1px);
+}
+
+.btnClear {
+  background: #1a1a24;
+  color: #e2e8f0;
+  border: 1px solid #2d2d3d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnClear:hover {
+  border-color: #3d3d55;
+  transform: translateY(-1px);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.editorSection,
+.outputSection {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2d2d3d;
+}
+
+.editor {
+  flex: 1;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 16px;
+  border: 1px solid #2d2d3d;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  background: #13131a;
+  color: #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.editor:focus {
+  border-color: #a78bfa;
+}
+
+.output {
+  flex: 1;
+  background: #13131a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.consoleOutput {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #10b981;
+}
+
+.error {
+  color: #f87171;
+  padding: 12px;
+  background: rgba(248, 113, 113, 0.1);
+  border-left: 3px solid #f87171;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.placeholder {
+  color: #475569;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.88rem;
+}
+
+.btnClearOutput {
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #2d2d3d;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.btnClearOutput:hover {
+  background: #13131a;
+  color: #94a3b8;
+  border-color: #3d3d55;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .editorSection,
+  .outputSection {
+    min-height: 350px;
+  }
+
+  .btnRun,
+  .btnBack,
+  .btnClear {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+}

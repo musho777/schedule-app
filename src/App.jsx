@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { PROJECTS } from './data/projects';
 import ProjectsScreen from './components/ProjectsScreen';
 import ProjectView from './components/ProjectView';
+import CodePlayground from './components/CodePlayground';
 
 function ProjectRoute() {
   const { id } = useParams();
@@ -15,6 +16,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<ProjectsScreen projects={PROJECTS} />} />
       <Route path="/project/:id" element={<ProjectRoute />} />
+      <Route path="/playground" element={<CodePlayground />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
