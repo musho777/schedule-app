@@ -18,7 +18,22 @@ export default function Achievements({ achievements }) {
                 : {}
             }
           >
-            <span className={s.achieveIcon}>{a.icon}</span>
+            <span className={s.achieveIcon}>
+              {typeof a.icon === 'string' && a.icon.endsWith('.svg') ? (
+                <img
+                  src={a.icon}
+                  alt={a.label}
+                  style={{
+                    width: '2.5rem',
+                    height: '2.5rem',
+                    display: 'block',
+                    filter: a.earned ? 'none' : 'grayscale(100%) brightness(0.5)'
+                  }}
+                />
+              ) : (
+                a.icon
+              )}
+            </span>
             <span className={s.achieveLabel}>{a.label}</span>
           </div>
         ))}

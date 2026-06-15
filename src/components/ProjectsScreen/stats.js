@@ -138,14 +138,14 @@ export function getAllStats(projects) {
     {
       id: "first",
       label: "First Task",
-      icon: "✓",
+      icon: "/src/assets/first-icon.svg",
       color: "#22c55e",
       earned: totalCompleted >= 1,
     },
     {
       id: "streak7",
       label: "7-Day Streak",
-      icon: "🔥",
+      icon: "/src/assets/fire.svg",
       color: "#f59e0b",
       earned: streak >= 7,
     },
