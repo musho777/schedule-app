@@ -663,8 +663,7 @@
 
 /* ── Recent Activity ── */
 .recentActivityContent {
-  min-height: 340px;
-  max-height: 340px;
+  height: 315px;
   overflow: hidden;
 }
 
