@@ -1,0 +1,100 @@
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progressText {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.progressPct {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.monthBlock {
+  margin-top: 36px;
+}
+
+.monthLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #10b981;
+  margin-bottom: 16px;
+  padding-left: 4px;
+  border-left: 3px solid #10b981;
+  padding-left: 10px;
+}
+
+.weekBlock {
+  margin-bottom: 24px;
+}
+
+.weekLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #475569;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.dayBlock {
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+
+.dayBlock.dayDone {
+  border-color: #10b98133;
+  background: #0d1f1a;
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dayNum {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dayProgress {
+  font-size: 0.7rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.dayDone .dayNum {
+  color: #10b981;
+}
+
+.dayDone .dayProgress {
+  color: #10b981;
+}
+
+.dailySection {
+  margin-top: 36px;
+}

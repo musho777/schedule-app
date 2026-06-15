@@ -1,0 +1,187 @@
+.app {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f0f13;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #1a1a24;
+  border-bottom: 1px solid #2d2d3d;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: -0.3px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.analyticsBtn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: #a78bfa18;
+  color: #a78bfa;
+  border: 1px solid #a78bfa44;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.analyticsBtn:hover {
+  background: #a78bfa30;
+  border-color: #a78bfa88;
+}
+
+.weekBadge {
+  font-size: 0.75rem;
+  background: #a78bfa22;
+  color: #a78bfa;
+  border: 1px solid #a78bfa44;
+  padding: 3px 12px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* Calendar sticky wrapper */
+.calendarWrapper {
+  position: sticky;
+  top: 57px;
+  z-index: 9;
+}
+
+/* Main */
+.main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+/* Date row */
+.dateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dateLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.backBtn {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: #a78bfa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.dateInfo {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Week focus card */
+.weekCard {
+  background: linear-gradient(135deg, #1e1830, #1a1a24);
+  border: 1px solid #a78bfa33;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+}
+
+.weekCardTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #a78bfa;
+  margin-bottom: 4px;
+}
+
+.weekCardDesc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Section */
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* All done */
+.allDone {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.allDoneEmoji {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.allDoneTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.allDoneText {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resetBtn {
+  font-size: 0.72rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: #2d2d3d;
+  color: #94a3b8;
+  border: 1px solid #3d3d55;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.resetBtn:hover {
+  border-color: #a78bfa;
+  color: #a78bfa;
+}

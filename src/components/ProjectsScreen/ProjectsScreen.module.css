@@ -1,0 +1,861 @@
+.screen {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f0f13;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.header {
+  background: #1a1a24;
+  border-bottom: 1px solid #2d2d3d;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: -0.3px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.userName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* ── Stats bar ── */
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 16px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 14px;
+  transition: border-color 0.2s;
+}
+
+.statCard:hover {
+  border-color: #3d3d55;
+}
+
+.statIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.statBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.68rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statHint {
+  font-size: 0.7rem;
+  color: #475569;
+  cursor: default;
+}
+
+.goalEdit {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.goalInput {
+  width: 48px;
+  background: #2d2d3d;
+  border: 1px solid #a78bfa44;
+  border-radius: 5px;
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  padding: 2px 5px;
+  outline: none;
+}
+
+.goalSave {
+  background: #a78bfa22;
+  color: #a78bfa;
+  border: 1px solid #a78bfa44;
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.xpBar {
+  height: 3px;
+  background: #2d2d3d;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.xpFill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+/* ── Dashboard ── */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.colGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr 280px;
+  gap: 16px;
+  align-items: start;
+}
+
+.leftCol,
+.centerCol,
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Weekly Activity + Milestone side by side */
+.centerRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ── Generic card ── */
+.card {
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.cardHeaderIcon {
+  font-size: 0.85rem;
+}
+
+.cardHeaderTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* ── Today's Focus ── */
+.focusHeroIcon {
+  color: #a78bfa;
+  font-size: 0.85rem;
+}
+
+.focusDay {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 2px;
+}
+
+.focusTasks {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 4px 0 6px;
+}
+
+.focusTask {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.focusCheck {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1.5px solid #3d3d55;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #22c55e;
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.focusCheckDone {
+  background: #22c55e22;
+  border-color: #22c55e66;
+}
+
+.focusTaskDone {
+  text-decoration: line-through;
+  color: #475569;
+}
+
+.focusMeta {
+  font-size: 0.72rem;
+  color: #475569;
+  margin: 6px 0 14px;
+}
+
+.focusEmpty {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 0 14px;
+}
+
+.focusEmptyText {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.focusEmptyHint {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.focusBtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.focusBtn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── Section label ── */
+.sectionLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.sectionSub {
+  font-size: 0.73rem;
+  color: #475569;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* ── Projects card (inside center col) ── */
+.projectsCard {
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+}
+
+/* ── Project list ── */
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.projectRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #13131a;
+  border: 1px solid #2d2d3d;
+  border-radius: 11px;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.projectRow:hover {
+  border-color: var(--accent, #a78bfa);
+  background: #1e1e2e;
+  transform: translateY(-1px);
+}
+
+.projectRowIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+.projectRowBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.projectRowTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.projectRowName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.projectRowSub {
+  font-size: 0.7rem;
+  color: #475569;
+}
+
+.projectTopics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.topicItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.topicDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2d2d3d;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.topicDotActive {
+  background: #a78bfa;
+}
+
+.projectRowBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.projectDuration {
+  font-size: 0.68rem;
+  color: #475569;
+  background: #2d2d3d;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+.projectPercent {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* ── Recommended ── */
+.recommendCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.recommendIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.recommendBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.recommendLabel {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+
+.recommendName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommendHint {
+  font-size: 0.68rem;
+  color: #475569;
+}
+
+.recommendBtn {
+  background: #a78bfa22;
+  color: #a78bfa;
+  border: 1px solid #a78bfa44;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.recommendBtn:hover {
+  background: #a78bfa33;
+}
+
+/* ── Quote ── */
+.quoteCard {
+  background: #1a1a24;
+  border: 1px solid #2d2d3d;
+  border-radius: 14px;
+  padding: 22px 22px 18px 50px;
+  position: relative;
+}
+
+.quoteIcon {
+  font-size: 3.5rem;
+  color: #a78bfa22;
+  line-height: 1;
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+
+.quoteText {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.quoteAuthor {
+  font-size: 0.72rem;
+  color: #475569;
+  font-weight: 600;
+  display: block;
+}
+
+/* ── Weekly Activity ── */
+.weekRow {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.weekDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.weekDayLabel {
+  font-size: 0.62rem;
+  color: #475569;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.weekDayBox {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  background: #2d2d3d;
+  transition: background 0.2s;
+}
+
+.weekDayActive {
+  background: #a78bfa;
+}
+
+.weekDayFuture {
+  opacity: 0.35;
+}
+
+/* ── Milestone ── */
+.milestoneBody {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.milestoneLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.milestoneName {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.milestoneReward {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.milestoneBarBg {
+  height: 4px;
+  background: #2d2d3d;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.milestoneBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+.milestonePct {
+  font-size: 0.68rem;
+  color: #475569;
+}
+
+.milestoneBadge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f59e0b22;
+  border: 2px solid #f59e0b55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: #f59e0b;
+}
+
+/* ── Recent Activity ── */
+.emptyHint {
+  font-size: 0.78rem;
+  color: #475569;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.recentItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #2d2d3d;
+}
+
+.recentItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recentItem:first-child {
+  padding-top: 0;
+}
+
+.recentCheck {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.recentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.recentTask {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recentMeta {
+  font-size: 0.68rem;
+  color: #475569;
+}
+
+/* ── Interview Readiness ── */
+.readinessPct {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.readinessRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.readinessRow:last-child {
+  margin-bottom: 0;
+}
+
+.readinessLabel {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.readinessBarBg {
+  width: 80px;
+  height: 4px;
+  background: #2d2d3d;
+  border-radius: 99px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.readinessBarFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.readinessPctSmall {
+  font-size: 0.68rem;
+  color: #64748b;
+  font-weight: 600;
+  width: 30px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Achievements ── */
+.achieveGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.achieveBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: #13131a;
+  border: 1px solid #2d2d3d;
+  border-radius: 10px;
+  padding: 12px 8px;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.achieveLocked {
+  opacity: 0.4;
+}
+
+.achieveIcon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.achieveLabel {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .colGrid {
+    grid-template-columns: 260px 1fr 240px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .statsBar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .colGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rightCol {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+
+  .centerRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .statsBar {
+    grid-template-columns: 1fr 1fr;
+    padding: 12px 14px;
+  }
+
+  .dashboard {
+    padding: 14px 14px 50px;
+  }
+
+  .colGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+
+  .rightCol {
+    grid-column: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header {
+    padding: 12px 16px;
+  }
+}
