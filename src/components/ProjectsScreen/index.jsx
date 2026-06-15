@@ -11,6 +11,7 @@ import InterviewReadiness from "./components/InterviewReadiness";
 import Achievements from "./components/Achievements";
 import ProjectsList from "./components/ProjectsList";
 import RecommendedPath from "./components/RecommendedPath";
+import { Header } from "./components/Header";
 
 export default function ProjectsScreen({ projects }) {
   const stats = getAllStats(projects);
@@ -18,46 +19,34 @@ export default function ProjectsScreen({ projects }) {
 
   return (
     <div className={s.screen}>
-      {/* Header */}
-      <header className={s.header}>
-        <h1 className={s.logo}>DevPath</h1>
-        <div className={s.user}>
-          <div className={s.avatar}>MP</div>
-          <span className={s.userName}>Mush Poghosyan</span>
-        </div>
-      </header>
-
-      {/* Stats bar */}
+      <Header />
       <StatsBar stats={stats} />
-
-      {/* Dashboard */}
       <div className={s.dashboard}>
-        {/* ── 3-column grid ── */}
-        <div className={s.colGrid}>
-          {/* Left: Today's Focus */}
+        <div style={{ display: "flex", gap: 16 }}>
           <div className={s.leftCol}>
-            <TodaysFocus
-              lastProject={stats.lastProject}
-              todaysTasks={stats.todaysTasks}
-              projects={projects}
-            />
-          </div>
-
-          {/* Center: Quote + Weekly Activity + Milestone */}
-          <div className={s.centerCol}>
-            <QuoteCard quote={quote} />
-
-            <div className={s.centerRow}>
-              <WeeklyActivity weekActivity={stats.weekActivity} />
-              <Milestone
-                nextMilestone={stats.nextMilestone}
-                milestoneProgress={stats.milestoneProgress}
-                milestoneTotal={stats.milestoneTotal}
+            <div className={s.colGrid}>
+              <TodaysFocus
+                lastProject={stats.lastProject}
+                todaysTasks={stats.todaysTasks}
+                projects={projects}
               />
+              <div className={s.centerCol}>
+                <QuoteCard quote={quote} />
+
+                <div className={s.centerRow}>
+                  <WeeklyActivity weekActivity={stats.weekActivity} />
+                  <Milestone
+                    nextMilestone={stats.nextMilestone}
+                    milestoneProgress={stats.milestoneProgress}
+                    milestoneTotal={stats.milestoneTotal}
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <ProjectsList projects={projects} />
             </div>
           </div>
-
-          {/* Right: Recent Activity + Interview Readiness + Achievements */}
           <div className={s.rightCol}>
             <RecentActivity recentTasks={stats.recentTasks} />
             <InterviewReadiness ivReadiness={stats.ivReadiness} />
@@ -65,10 +54,6 @@ export default function ProjectsScreen({ projects }) {
           </div>
         </div>
 
-        {/* Full-width: Choose a learning path */}
-        <ProjectsList projects={projects} />
-
-        {/* Full-width: Recommended */}
         <RecommendedPath recommended={stats.recommended} />
       </div>
     </div>
