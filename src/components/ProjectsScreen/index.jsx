@@ -20,8 +20,8 @@ export default function ProjectsScreen({ projects }) {
   return (
     <div className={s.screen}>
       <Header />
-      <StatsBar stats={stats} />
       <div className={s.dashboard}>
+        <StatsBar stats={stats} />
         <div style={{ display: "flex", gap: 16 }}>
           <div className={s.leftCol}>
             <div className={s.colGrid}>
