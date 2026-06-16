@@ -60,6 +60,25 @@ export function useSchedule(storageKey) {
     persist({ ...state, completed: {} });
   }, [state, persist]);
 
+  const setTaskNote = useCallback((taskId, note) => {
+    const notes = { ...(state.notes || {}) };
+    // If note is a string and empty, or an object with all empty values, delete it
+    const isEmpty = typeof note === 'string'
+      ? note.trim() === ''
+      : Object.values(note).every(v => !v || v.trim() === '');
+
+    if (isEmpty) {
+      delete notes[taskId];
+    } else {
+      notes[taskId] = note;
+    }
+    persist({ ...state, notes });
+  }, [state, persist]);
+
+  const getTaskNote = useCallback((taskId) => {
+    return (state.notes || {})[taskId] || {};
+  }, [state]);
+
   return {
     startDate: state.startDate,
     currentDay,
@@ -68,5 +87,8 @@ export function useSchedule(storageKey) {
     resetStartDate,
     resetCompleted,
     toggleTask,
+    setTaskNote,
+    getTaskNote,
+    notes: state.notes || {},
   };
 }

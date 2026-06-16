@@ -129,6 +129,7 @@ export default function ChecklistView({
                     onAsk={setAiTask}
                     onQuiz={null}
                     onLeetCode={setLcTask}
+                    expandable={true}
                   />
                 ))}
               </div>

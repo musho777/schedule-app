@@ -151,3 +151,113 @@
   background: #fb923c28;
   border-color: #fb923c88;
 }
+
+/* Card wrapper for expandable cards */
+.cardWrapper {
+  margin-bottom: 8px;
+}
+
+.cardWrapper .card {
+  margin-bottom: 0;
+}
+
+/* Expand button */
+.expandBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 7px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: inherit;
+  border: 1px solid #3d3d55;
+  background: transparent;
+  color: #94a3b8;
+}
+
+.expandBtn:hover {
+  background: #2a2a3a;
+  border-color: #4d4d65;
+}
+
+.expandIcon {
+  transition: transform 0.2s;
+}
+
+.expandIcon[data-expanded='true'] {
+  transform: rotate(180deg);
+}
+
+/* Expanded content area */
+.expandedContent {
+  background: #12121a;
+  border: 1px solid #2d2d3d;
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 18px;
+  margin-top: -12px;
+  padding-top: 20px;
+}
+
+/* Documentation sections */
+.docSection {
+  margin-bottom: 20px;
+}
+
+.docSection:last-child {
+  margin-bottom: 0;
+}
+
+.docLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #60a5fa;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.docLabel::before {
+  content: '';
+  width: 3px;
+  height: 12px;
+  background: #60a5fa;
+  border-radius: 2px;
+}
+
+.docContent {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.codeBlock {
+  background: #0d0d12;
+  border: 1px solid #2d2d3d;
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.complexityBadge {
+  display: inline-block;
+  background: #1e3a2e;
+  color: #4ade80;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
