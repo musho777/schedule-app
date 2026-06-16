@@ -3,6 +3,7 @@ import { DAYS as SQL_DAYS, DAILY_TASKS as SQL_DAILY } from "./schedules/sql";
 import { CATEGORIES as IV_CATEGORIES } from "./schedules/interview";
 import { CATEGORIES as FIN_CATEGORIES } from "./schedules/finance";
 import { CATEGORIES as FIN_IV_CATEGORIES } from "./schedules/financeInterview";
+import { CATEGORIES as DESIGN_IV_CATEGORIES } from "./schedules/designInterview";
 
 export const PROJECTS = [
   {
@@ -92,6 +93,23 @@ export const PROJECTS = [
       "Behavioral (Finance)",
     ],
     categories: FIN_IV_CATEGORIES,
+  },
+  {
+    id: "design-interview",
+    name: "Graphic Design Interview Prep",
+    icon: "🎨",
+    subtitle: "Illustrator & Photoshop Interview Checklist",
+    storageKey: "project_design_interview_v1",
+    color: "#d946ef",
+    checklistMode: true,
+    topics: [
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Design Fundamentals",
+      "Portfolio & Process",
+      "Design Tests",
+    ],
+    categories: DESIGN_IV_CATEGORIES,
   },
   {
     id: "devops",
