@@ -1,6 +1,8 @@
 import { DAYS as JS_DAYS, DAILY_TASKS as JS_DAILY } from "./schedules/js";
 import { DAYS as SQL_DAYS, DAILY_TASKS as SQL_DAILY } from "./schedules/sql";
 import { CATEGORIES as IV_CATEGORIES } from "./schedules/interview";
+import { CATEGORIES as FIN_CATEGORIES } from "./schedules/finance";
+import { CATEGORIES as FIN_IV_CATEGORIES } from "./schedules/financeInterview";
 
 export const PROJECTS = [
   {
@@ -72,6 +74,24 @@ export const PROJECTS = [
       "Risk Management",
     ],
     checklistMode: true,
+    categories: FIN_CATEGORIES,
+  },
+  {
+    id: "finance-interview",
+    name: "Finance Interview Prep",
+    icon: "💼",
+    subtitle: "Finance & FP&A Interview Checklist",
+    storageKey: "project_finance_interview_v1",
+    color: "#047857",
+    checklistMode: true,
+    topics: [
+      "Technical Finance",
+      "Accounting & GAAP",
+      "FP&A Analysis",
+      "Case Studies & Modeling",
+      "Behavioral (Finance)",
+    ],
+    categories: FIN_IV_CATEGORIES,
   },
   {
     id: "devops",

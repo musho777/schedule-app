@@ -1,0 +1,75 @@
+export const CATEGORIES = [
+  {
+    id: 'budgeting',
+    title: 'Budget Planning & Forecasting',
+    tasks: [
+      { id: 'fin_bp_1', title: 'Master zero-based budgeting — allocate every dollar, track variances monthly', time: '30 min', tag: 'study' },
+      { id: 'fin_bp_2', title: 'Build a rolling forecast model — 12-month projection with quarterly updates', time: '45 min', tag: 'build' },
+      { id: 'fin_bp_3', title: 'Revenue forecasting — top-down vs bottom-up approaches, driver-based models', time: '30 min', tag: 'study' },
+      { id: 'fin_bp_4', title: 'Expense management — categorize fixed vs variable costs, identify cost drivers', time: '25 min', tag: 'study' },
+      { id: 'fin_bp_5', title: 'Variance analysis — actual vs budget, identify trends and outliers', time: '30 min', tag: 'practice' },
+      { id: 'fin_bp_6', title: 'Build Excel budget template — formulas, pivot tables, conditional formatting', time: '60 min', tag: 'build' },
+    ],
+  },
+  {
+    id: 'reporting',
+    title: 'Financial Reporting & Analysis',
+    tasks: [
+      { id: 'fin_rp_1', title: 'Income Statement mastery — P&L structure, margins, EBITDA calculations', time: '30 min', tag: 'study' },
+      { id: 'fin_rp_2', title: 'Balance Sheet analysis — assets, liabilities, equity, working capital', time: '30 min', tag: 'study' },
+      { id: 'fin_rp_3', title: 'Cash Flow Statement — operating, investing, financing activities, free cash flow', time: '30 min', tag: 'study' },
+      { id: 'fin_rp_4', title: 'Financial ratios — liquidity, profitability, efficiency, leverage metrics', time: '35 min', tag: 'study' },
+      { id: 'fin_rp_5', title: 'Dashboard creation — KPIs, trend analysis, executive summary reports', time: '45 min', tag: 'build' },
+      { id: 'fin_rp_6', title: 'Month-end close process — reconciliations, accruals, journal entries', time: '25 min', tag: 'study' },
+      { id: 'fin_rp_7', title: 'Practice: Analyze a real company\'s 10-K filing — identify key metrics', time: '40 min', tag: 'practice' },
+    ],
+  },
+  {
+    id: 'cost',
+    title: 'Cost Analysis & Control',
+    tasks: [
+      { id: 'fin_ca_1', title: 'Cost accounting basics — direct vs indirect costs, overhead allocation', time: '30 min', tag: 'study' },
+      { id: 'fin_ca_2', title: 'Break-even analysis — fixed costs, variable costs, contribution margin', time: '25 min', tag: 'study' },
+      { id: 'fin_ca_3', title: 'Activity-based costing (ABC) — cost drivers, cost pools, allocation rates', time: '30 min', tag: 'study' },
+      { id: 'fin_ca_4', title: 'Cost-volume-profit analysis — sensitivity analysis, margin of safety', time: '30 min', tag: 'practice' },
+      { id: 'fin_ca_5', title: 'Standard costing — set standards, analyze variances, corrective actions', time: '25 min', tag: 'study' },
+      { id: 'fin_ca_6', title: 'Build a cost analysis model — unit economics, customer acquisition cost (CAC)', time: '45 min', tag: 'build' },
+    ],
+  },
+  {
+    id: 'investment',
+    title: 'Investment Strategy & Capital Allocation',
+    tasks: [
+      { id: 'fin_inv_1', title: 'Time value of money — PV, FV, NPV, IRR calculations', time: '30 min', tag: 'study' },
+      { id: 'fin_inv_2', title: 'Capital budgeting — payback period, discounted cash flow (DCF) analysis', time: '35 min', tag: 'study' },
+      { id: 'fin_inv_3', title: 'Portfolio theory — diversification, risk-return tradeoff, Sharpe ratio', time: '30 min', tag: 'study' },
+      { id: 'fin_inv_4', title: 'Asset allocation strategies — stocks, bonds, real estate, alternative investments', time: '30 min', tag: 'study' },
+      { id: 'fin_inv_5', title: 'Build a DCF valuation model — free cash flow projection, WACC, terminal value', time: '60 min', tag: 'build' },
+      { id: 'fin_inv_6', title: 'ROI analysis — calculate return on investment for different scenarios', time: '25 min', tag: 'practice' },
+    ],
+  },
+  {
+    id: 'risk',
+    title: 'Risk Management & Compliance',
+    tasks: [
+      { id: 'fin_rm_1', title: 'Financial risk types — market, credit, operational, liquidity risks', time: '25 min', tag: 'study' },
+      { id: 'fin_rm_2', title: 'Risk assessment framework — identify, measure, mitigate, monitor', time: '30 min', tag: 'study' },
+      { id: 'fin_rm_3', title: 'Internal controls — segregation of duties, authorization, reconciliation', time: '25 min', tag: 'study' },
+      { id: 'fin_rm_4', title: 'Compliance essentials — SOX, GAAP, IFRS standards overview', time: '30 min', tag: 'study' },
+      { id: 'fin_rm_5', title: 'Fraud detection — red flags, controls testing, audit trail review', time: '25 min', tag: 'study' },
+      { id: 'fin_rm_6', title: 'Scenario planning — stress testing, sensitivity analysis, contingency plans', time: '35 min', tag: 'practice' },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'Financial Tools & Technology',
+    tasks: [
+      { id: 'fin_tl_1', title: 'Excel advanced — INDEX-MATCH, array formulas, Power Query, pivot tables', time: '45 min', tag: 'study' },
+      { id: 'fin_tl_2', title: 'Financial modeling best practices — structure, assumptions, sensitivity tables', time: '30 min', tag: 'study' },
+      { id: 'fin_tl_3', title: 'Data visualization — charts, graphs, dashboards for financial data', time: '30 min', tag: 'study' },
+      { id: 'fin_tl_4', title: 'ERP systems overview — SAP, Oracle, NetSuite key functionalities', time: '25 min', tag: 'read' },
+      { id: 'fin_tl_5', title: 'BI tools — Tableau, Power BI for financial reporting and analysis', time: '30 min', tag: 'study' },
+      { id: 'fin_tl_6', title: 'Build a complete financial model — 3-statement model with assumptions', time: '90 min', tag: 'build' },
+    ],
+  },
+];

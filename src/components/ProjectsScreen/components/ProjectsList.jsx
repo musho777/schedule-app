@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getProjectProgress } from "../stats";
 import s from "../ProjectsScreen.module.css";
@@ -5,21 +6,32 @@ import Button from "../../Button";
 
 export default function ProjectsList({ projects }) {
   const navigate = useNavigate();
+  const [showAll, setShowAll] = useState(false);
+
+  const INITIAL_DISPLAY_COUNT = 6;
+  const displayedProjects = showAll ? projects : projects.slice(0, INITIAL_DISPLAY_COUNT);
+  const hasMoreProjects = projects.length > INITIAL_DISPLAY_COUNT;
 
   return (
     <div className={s.projectsCard}>
       <div className={s.ProjectHeader}>
         <div className={s.sectionLabel}>Choose a learning path</div>
-        <Button variant="ghost" size="small">
-          Show more
-        </Button>
+        {hasMoreProjects && (
+          <Button
+            variant="ghost"
+            size="small"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Show less" : "Show more"}
+          </Button>
+        )}
       </div>
       <p className={s.sectionSub}>
         Each path is a structured curriculum. Your progress is saved
         independently.
       </p>
       <div className={s.projectList}>
-        {projects.map((project) => {
+        {displayedProjects.map((project) => {
           const progress = getProjectProgress(project);
           return (
             <button
