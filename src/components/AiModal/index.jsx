@@ -28,6 +28,7 @@ export default function AiModal({ task, onClose }) {
   const [streaming, setStreaming] = useState(false);
   const [streamText, setStreamText] = useState('');
   const [typedText, setTypedText] = useState('');
+  const [isExpanded, setIsExpanded] = useState(false);
   const bottomRef = useRef(null);
   const messagesRef = useRef(null);
   const inputRef = useRef(null);
@@ -113,13 +114,18 @@ export default function AiModal({ task, onClose }) {
   if (!API_KEY) {
     return (
       <div className={s.overlay} onClick={e => e.target === e.currentTarget && onClose()}>
-        <div className={s.modal}>
+        <div className={s.modal} data-expanded={isExpanded}>
           <div className={s.header}>
             <div>
               <div className={s.headerTitle}>AI Assistant</div>
               <div className={s.headerSub}>{task.title}</div>
             </div>
-            <button className={s.closeBtn} onClick={onClose}>✕</button>
+            <div className={s.headerActions}>
+              <button className={s.expandBtn} onClick={() => setIsExpanded(!isExpanded)} title={isExpanded ? 'Collapse' : 'Expand'}>
+                {isExpanded ? '⊟' : '⊞'}
+              </button>
+              <button className={s.closeBtn} onClick={onClose}>✕</button>
+            </div>
           </div>
           <div className={s.noKey}>
             <div className={s.noKeyTitle}>API key required</div>
@@ -136,13 +142,18 @@ export default function AiModal({ task, onClose }) {
 
   return (
     <div className={s.overlay} onClick={e => e.target === e.currentTarget && onClose()}>
-      <div className={s.modal}>
+      <div className={s.modal} data-expanded={isExpanded}>
         <div className={s.header}>
           <div>
             <div className={s.headerTitle}>AI Assistant</div>
             <div className={s.headerSub}>{task.title}</div>
           </div>
-          <button className={s.closeBtn} onClick={onClose}>✕</button>
+          <div className={s.headerActions}>
+            <button className={s.expandBtn} onClick={() => setIsExpanded(!isExpanded)} title={isExpanded ? 'Collapse' : 'Expand'}>
+              {isExpanded ? '⊟' : '⊞'}
+            </button>
+            <button className={s.closeBtn} onClick={onClose}>✕</button>
+          </div>
         </div>
 
         <div className={s.messages} ref={messagesRef}>
