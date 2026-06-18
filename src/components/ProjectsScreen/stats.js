@@ -8,6 +8,8 @@ import {
   getDayLabel,
   formatRelDate,
 } from "./helpers";
+import firstIcon from "../../assets/first-icon.svg?url";
+import fireIcon from "../../assets/fire.svg?url";
 
 // ── Stats computation ─────────────────────────────────────────────────────
 export function getAllStats(projects) {
@@ -138,14 +140,14 @@ export function getAllStats(projects) {
     {
       id: "first",
       label: "First Task",
-      icon: "/src/assets/first-icon.svg",
+      icon: firstIcon,
       color: "#22c55e",
       earned: totalCompleted >= 1,
     },
     {
       id: "streak7",
       label: "7-Day Streak",
-      icon: "/src/assets/fire.svg",
+      icon: fireIcon,
       color: "#f59e0b",
       earned: streak >= 7,
     },
