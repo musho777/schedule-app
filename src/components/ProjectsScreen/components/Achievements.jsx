@@ -19,7 +19,7 @@ export default function Achievements({ achievements }) {
             }
           >
             <span className={s.achieveIcon}>
-              {typeof a.icon === 'string' && a.icon.endsWith('.svg') ? (
+              {typeof a.icon === 'string' && (a.icon.endsWith('.svg') || a.icon.startsWith('data:image/') || a.icon.startsWith('http')) ? (
                 <img
                   src={a.icon}
                   alt={a.label}
